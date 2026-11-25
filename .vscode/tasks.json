@@ -1,0 +1,19 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Órbita: Iniciar site",
+      "type": "npm",
+      "script": "dev",
+      "path": "${workspaceFolder}",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      },
+      "runOptions": {
+        "runOn": "default"
+      }
+    }
+  ]
+}
