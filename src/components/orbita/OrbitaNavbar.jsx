@@ -22,13 +22,12 @@ export default function OrbitaNavbar() {
           <span className="font-inter font-semibold text-orbita-black tracking-tight text-lg">Órbita</span>
         </Link>
         <div className="hidden md:flex items-center gap-8">
-          {[{ label: 'Platform', href: '/product' }, { label: 'Modules', href: '/#modules' }, { label: 'About', href: '/about' }].map((item) => (
+          {[{ label: 'Serviços', href: '/#servicos' }, { label: 'Como funciona', href: '/#processo' }].map((item) => (
             <Link key={item.label} to={item.href} className="text-sm text-orbita-gray hover:text-orbita-black transition-colors duration-200 font-medium">{item.label}</Link>
           ))}
         </div>
         <div className="hidden md:flex items-center gap-3">
-          <Link to="/contact" className="text-sm text-orbita-gray hover:text-orbita-black transition-colors font-medium">Contact</Link>
-          <Link to="/demo" className="text-sm bg-orbita-black text-white font-medium px-4 py-2 rounded-full hover:bg-orbita-black/80 transition-all duration-200">Request Demo</Link>
+          <Link to="/contact" className="text-sm bg-orbita-black text-white font-medium px-4 py-2 rounded-full hover:bg-orbita-black/80 transition-all duration-200">Pedir orçamento</Link>
         </div>
         <button onClick={() => setOpen(!open)} className="md:hidden text-orbita-black">
           {open ? <X size={20} /> : <Menu size={20} />}
@@ -36,10 +35,10 @@ export default function OrbitaNavbar() {
       </div>
       {open && (
         <div className="md:hidden glass-light border-t border-black/[0.06] px-6 py-6 space-y-4">
-          {[{ label: 'Platform', href: '/product' }, { label: 'Modules', href: '/#modules' }, { label: 'About', href: '/about' }, { label: 'Contact', href: '/contact' }].map((item) => (
+          {[{ label: 'Serviços', href: '/#servicos' }, { label: 'Como funciona', href: '/#processo' }, { label: 'Contato', href: '/contact' }].map((item) => (
             <Link key={item.label} to={item.href} onClick={() => setOpen(false)} className="block text-sm text-orbita-black font-medium py-1">{item.label}</Link>
           ))}
-          <Link to="/demo" onClick={() => setOpen(false)} className="block text-sm bg-orbita-black text-white font-medium px-4 py-2.5 rounded-full text-center">Request Demo</Link>
+          <Link to="/contact" onClick={() => setOpen(false)} className="block text-sm bg-orbita-black text-white font-medium px-4 py-2.5 rounded-full text-center">Pedir orçamento</Link>
         </div>
       )}
     </nav>
